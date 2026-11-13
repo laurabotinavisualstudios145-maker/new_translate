@@ -1,0 +1,113 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: transparent; /* Transparente para integrarse al fondo de WordPress */
+            padding: 15px;
+            color: #2c3e50;
+        }
+
+        .caja-traductor-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .contenedor-textos {
+            position: relative;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .capa-texto {
+            transition: opacity 0.45s ease, transform 0.45s ease;
+            line-height: 1.7;
+        }
+
+        .capa-texto h2 {
+            color: #0056b3;
+            margin-bottom: 15px;
+            font-size: 1.75rem;
+            line-height: 1.3;
+        }
+
+        .capa-texto h3 {
+            color: #1e293b;
+            margin-top: 24px;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .capa-texto p {
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+
+        /* Capa en inglés superpuesta encima */
+        #texto-en {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 35px;
+            background-color: #ffffff;
+            overflow-y: auto; /* Permite scroll interno si en móvil un texto es más alto que el otro */
+        }
+
+        .oculta {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(8px);
+        }
+
+        .activa {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .zona-boton {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .boton-idioma {
+            padding: 12px 28px;
+            background-color: #0056b3;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.25s, transform 0.1s;
+            box-shadow: 0 3px 10px rgba(0, 86, 179, 0.25);
+        }
+
+        .boton-idioma:hover {
+            background-color: #003d82;
+        }
+
+        .boton-idioma:active {
+            transform: scale(0.97);
+        }
+
+        /* Ajustes para celulares */
+        @media (max-width: 600px) {
+            .contenedor-textos, #texto-en {
+                padding: 22px;
+            }
+            .capa-texto h2 {
+                font-size: 1.4rem;
+            }
+        }
+    
