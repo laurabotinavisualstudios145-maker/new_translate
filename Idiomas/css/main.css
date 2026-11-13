@@ -28,6 +28,10 @@
         }
 
         .capa-texto {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             transition: opacity 0.45s ease, transform 0.45s ease;
             line-height: 1.7;
         }
@@ -51,16 +55,8 @@
             font-size: 1rem;
         }
 
-        /* Capa en inglés superpuesta encima */
         #texto-en {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 35px;
             background-color: #ffffff;
-            overflow-y: auto; /* Permite scroll interno si en móvil un texto es más alto que el otro */
         }
 
         .oculta {
@@ -70,6 +66,7 @@
         }
 
         .activa {
+            position: relative;
             opacity: 1;
             pointer-events: auto;
             transform: translateY(0);
@@ -103,7 +100,7 @@
 
         /* Ajustes para celulares */
         @media (max-width: 600px) {
-            .contenedor-textos, #texto-en {
+            .contenedor-textos {
                 padding: 22px;
             }
             .capa-texto h2 {
