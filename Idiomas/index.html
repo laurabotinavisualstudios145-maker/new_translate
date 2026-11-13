@@ -39,7 +39,7 @@
                 
                 <h3>How Do We Do It?</h3>
                 <p><strong>- Prepare Before Class (Flipped Classroom):</strong> Before each lesson, you will explore engaging, practical, and easy-to-follow learning materials on our Moodle platform. You can study at your own pace and on your own schedule, building the foundation you need to actively participate in class.</p>
-                <p><strong>- Start Speaking! (Communicative Approach):</strong> Whether your classes are face-to-face or online, the focus is on using English—not memorizing grammar rules. You will participate in interactive activities, collaborate with classmates, and communicate in real-life situations.<br>
+                <p><strong>- Start Speaking! (Communicative Approach):</strong> Whether your classes are face-to-face or online, the focus is on using English—not memorizing grammar rules. You will participate in interactive activities, collaborate with classmates, and communicate in real-life situations.
                 Your instructor is not there to deliver long lectures, but to guide, support, and encourage you, helping you gain the confidence to express yourself naturally and without fear.</p>
                 
                 <h3>Take Your English Beyond the Classroom</h3>
@@ -69,11 +69,15 @@
 
         if (textoEs.classList.contains("oculta")) {
             textoEs.classList.remove("oculta");
+            textoEs.classList.add("activa");
+            textoEn.classList.remove("activa");
             textoEn.classList.add("oculta");
             document.getElementById("btn-traducir").textContent = "Translate to English";
         } else {
+            textoEs.classList.remove("activa");
             textoEs.classList.add("oculta");
             textoEn.classList.remove("oculta");
+            textoEn.classList.add("activa");
             document.getElementById("btn-traducir").textContent = "Traducir al Español";
         }
     }
