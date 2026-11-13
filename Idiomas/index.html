@@ -62,7 +62,22 @@
             </button>
         </div>
     </div>
-<script src="js/main.js"></script>
-    
+<script>
+    function alternarIdioma() {
+        var textoEs = document.getElementById("texto-es");
+        var textoEn = document.getElementById("texto-en");
+
+        if (textoEs.classList.contains("oculta")) {
+            textoEs.classList.remove("oculta");
+            textoEn.classList.add("oculta");
+            document.getElementById("btn-traducir").textContent = "Traducir al español";
+        } else {
+            textoEs.classList.add("oculta");
+            textoEn.classList.remove("oculta");
+            document.getElementById("btn-traducir").textContent = "Translate to English";
+        }
+    }
+</script>
+
 </body>
 </html>
